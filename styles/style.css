@@ -4,6 +4,11 @@ html {
     background-color: #B7E886;
 }
 
+video{
+    display: block;
+    margin: 10px auto 0;
+}
+
 h1 {
     font-size: 60px;
     text-align: center;
