@@ -21,7 +21,9 @@ myImage.onclick = function () {
 function estableceNombreUsuario() {
   let miNombre = prompt('Introduzca su nombre.');
   if (!miNombre) {
-    estableceNombreUsuario();
+    if(localStorage.getItem("nombre")===null){
+      estableceNombreUsuario();
+    } 
   } else {
     localStorage.setItem('nombre', miNombre);
     miTitulo.innerHTML = 'Buen día, ' + miNombre;

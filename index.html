@@ -11,154 +11,170 @@
 </head>
 
 <body>
-    <h1>Gatito Lindo</h1>
-    <img src="images/gatito.jpg" alt="Gatito">
+    <div class="contenedor">
+        <div class="borde-left"></div>
+        <div class="principal">
+            <header>
+                <h1>Gatito Lindo</h1>
+            </header>
+            <div class="menu">
+                <a class="selected-menu">Inicio</a>
+                <a href="pages/other-semantics.html">Semanticas</a>
+            </div>
+            <main role="main">
+                <img src="images/gatito.jpg" alt="Gatito">
+
+                <video src="videos/video.mp4" controls>
+                    <p>Your browser doesn't support HTML5 video. Here is a <a href="rabbit320.webm">link to the
+                            video</a>
+                        instead.
+                    </p>
+                </video>
+
+                <br>
+                <iframe id="videoYT" width="560" height="315" src="" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+
+                <br><br>
+                <iframe id="maps" src="" width="600" height="450" frameborder="0" allowfullscreen="" aria-hidden="false"
+                    tabindex="0"></iframe>
+                <br><br><br>
+                <button>Cambiar de usuario</button>
+
+                <p>
+                    <a id="DImagen" href="images/gatito.jpg" download="gatito.jpg">Descargar imagen</a>
+                </p>
+
+                <p>
+                    <a href="pages/other-semantics.html">Semantica de codigo</a>
+                </p>
+
+                <table>
+                    <caption>School Time</caption>
+                    <colgroup style="background-color: rgb(245, 245, 245)">
+                        <col span="2">
+                        <col style="background-color:#97DB9A">
+                        <col style="width:42px">
+                        <col style="background-color: #97DB9A">
+                        <col style="background-color:#DCC48E; border:4px solid #C1437A">
+                        <col style="width:42px" span="2">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <th>Mon</th>
+                            <th>Tues</th>
+                            <th>Wed</th>
+                            <th>Thurs</th>
+                            <th>Fri</th>
+                            <th>Sat</th>
+                            <th>Sun</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>1st period</th>
+                            <td>English</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>German</td>
+                            <td>Dutch</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <th>2nd period</th>
+                            <td>English</td>
+                            <td>English</td>
+                            <td>&nbsp;</td>
+                            <td>German</td>
+                            <td>Dutch</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <th>3rd period</th>
+                            <td>&nbsp;</td>
+                            <td>German</td>
+                            <td>&nbsp;</td>
+                            <td>German</td>
+                            <td>Dutch</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <th>4th period</th>
+                            <td>&nbsp;</td>
+                            <td>English</td>
+                            <td>&nbsp;</td>
+                            <td>English</td>
+                            <td>Dutch</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                    </tbody>
+                </table>
 
 
-    <video src="videos/video.mp4" controls>
-        <p>Your browser doesn't support HTML5 video. Here is a <a href="rabbit320.webm">link to the video</a> instead.
-        </p>
-    </video>
+                <table style="background-color: rgb(245, 245, 245)">
+                    <caption>How I chose to spend my money</caption>
+                    <thread>
+                        <tr>
+                            <th scope="col">Purchase</th>
+                            <th scope="col">Location</th>
+                            <th scope="col">Date</th>
+                            <th scope="col">Evaluation</th>
+                            <th scope="col">Cost (€)</th>
+                        </tr>
+                    </thread>
+                    <tfoot>
+                        <tr>
+                            <td colspan="4">SUM</td>
+                            <td>118</td>
+                        </tr>
+                    </tfoot>
+                    <tbody>
+                        <tr>
+                            <td>Haircut</td>
+                            <td>Hairdresser</td>
+                            <td>12/09</td>
+                            <td>Great idea</td>
+                            <td>30</td>
+                        </tr>
+                        <tr>
+                            <td>Lasagna</td>
+                            <td>Restaurant</td>
+                            <td>12/09</td>
+                            <td>Regrets</td>
+                            <td>18</td>
+                        </tr>
+                        <tr>
+                            <td>Shoes</td>
+                            <td>Shoeshop</td>
+                            <td>13/09</td>
+                            <td>Big regrets</td>
+                            <td>65</td>
+                        </tr>
+                        <tr>
+                            <td>Toothpaste</td>
+                            <td>Supermarket</td>
+                            <td>13/09</td>
+                            <td>Good</td>
+                            <td>5</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </main>
 
-    <br>
-    <iframe id="videoYT" width="560" height="315" src="" frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen></iframe>
-
-    <br><br>
-    <iframe id="maps" src="" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""
-        aria-hidden="false" tabindex="0"></iframe>
-    <br><br><br>
-    <button>Cambiar de usuario</button>
-
-    <p>
-        <a id="DImagen" href="images/gatito.jpg" download="gatito.jpg">Descargar imagen</a>
-    </p>
-
-    <p>
-        <a href="pages/other-semantics.html">Semantica de codigo</a>
-    </p>
-
-    <table>
-        <caption>School Time</caption>
-        <colgroup style="background-color: rgb(245, 245, 245)">
-            <col span="2">
-            <col style="background-color:#97DB9A">
-            <col style="width:42px">
-            <col style="background-color: #97DB9A">
-            <col style="background-color:#DCC48E; border:4px solid #C1437A">
-            <col style="width:42px" span="2">
-        </colgroup>
-        <thead>
-            <tr>
-                <td>&nbsp;</td>
-                <th>Mon</th>
-                <th>Tues</th>
-                <th>Wed</th>
-                <th>Thurs</th>
-                <th>Fri</th>
-                <th>Sat</th>
-                <th>Sun</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <th>1st period</th>
-                <td>English</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>German</td>
-                <td>Dutch</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-            </tr>
-            <tr>
-                <th>2nd period</th>
-                <td>English</td>
-                <td>English</td>
-                <td>&nbsp;</td>
-                <td>German</td>
-                <td>Dutch</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-            </tr>
-            <tr>
-                <th>3rd period</th>
-                <td>&nbsp;</td>
-                <td>German</td>
-                <td>&nbsp;</td>
-                <td>German</td>
-                <td>Dutch</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-            </tr>
-            <tr>
-                <th>4th period</th>
-                <td>&nbsp;</td>
-                <td>English</td>
-                <td>&nbsp;</td>
-                <td>English</td>
-                <td>Dutch</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-            </tr>
-        </tbody>
-    </table>
-
-
-    <table style="background-color: rgb(245, 245, 245)">
-        <caption>How I chose to spend my money</caption>
-        <thread>
-            <tr>
-                <th scope="col">Purchase</th>
-                <th scope="col">Location</th>
-                <th scope="col">Date</th>
-                <th scope="col">Evaluation</th>
-                <th scope="col">Cost (€)</th>
-            </tr>
-        </thread>
-        <tfoot>
-            <tr>
-                <td colspan="4">SUM</td>
-                <td>118</td>
-            </tr>
-        </tfoot>
-        <tbody>
-            <tr>
-                <td>Haircut</td>
-                <td>Hairdresser</td>
-                <td>12/09</td>
-                <td>Great idea</td>
-                <td>30</td>
-            </tr>
-            <tr>
-                <td>Lasagna</td>
-                <td>Restaurant</td>
-                <td>12/09</td>
-                <td>Regrets</td>
-                <td>18</td>
-            </tr>
-            <tr>
-                <td>Shoes</td>
-                <td>Shoeshop</td>
-                <td>13/09</td>
-                <td>Big regrets</td>
-                <td>65</td>
-            </tr>
-            <tr>
-                <td>Toothpaste</td>
-                <td>Supermarket</td>
-                <td>13/09</td>
-                <td>Good</td>
-                <td>5</td>
-            </tr>
-        </tbody>
-    </table>
-
-
-    
-
+            <footer>
+                <p><span id="copyright">&copy;</span> FloodApps - 2021</p>
+            </footer>
+        </div>
+        <div class="borde-rigth"></div>
+    </div>
     <script src="scripts/main.js"></script>
+
 </body>
 
 </html>
