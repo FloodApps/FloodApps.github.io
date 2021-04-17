@@ -28,18 +28,42 @@ h1{
     background-position: center;
     background-color: aliceblue;
     background-size: cover;
-    height: 600px;
-    text-align: center;
-    padding: 200px 0;
+    height: 700px;
 }
 
 .titulo{
     background: rgba(0, 0, 0, 0.4);
     height: 200px;
     line-height: 200px; 
+    margin-top: 225px;
+    text-align: center;
 }
 
 .header h1{
     color: rgba(248, 248, 248, 0.9);
     font-size: 10em;
+}
+
+.menu{
+    background: rgba(0, 0, 0, 0.74);
+    height:50px;
+    line-height: 50px;
+    text-align: center;
+}
+
+.menu a{
+    text-decoration: none;
+    padding: 5px;
+    margin: 0 10px;
+    font-size: 2.5em;
+    color: rgb(224, 224, 224);
+    transition: 0.7s;
+}
+
+.menu a:hover{
+    color:rgb(209, 130, 66);
+}
+
+.menu a.selected{
+    color:rgb(209, 130, 66);
 }
