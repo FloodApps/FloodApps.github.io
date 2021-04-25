@@ -1,0 +1,62 @@
+  
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <link rel="shortcut icon" href="../images/favicon.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <link href="../styles/initializer.css" rel="stylesheet">
+    <link href="../styles/style.css" rel="stylesheet">
+    <meta charset="utf-8">
+    <title>FloodAPPs - Contacto</title>
+</head>
+
+<body>
+
+    
+    <div class="header">
+        <div class="menu">
+            <a href="../index.html">Inicio</a>
+            <a href="#">Prueba</a>
+            <a href="#">Acerca De</a>
+            <a href="#" class="selected">Contacto</a>
+
+        <div class="cuerpo">
+            <form>
+                <div>
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" v-model.trim="nombre"
+                    @blur="verifyName" @input="resetErrorName"
+                    id="nombre" name="nombre" 
+                    :class="{inputError: nameError, inputValid: nameValid}">
+                    <p class="pError" v-if="nameError">{{errorNombre}}</p>
+                </div>
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="text" v-model.trim="email"
+                    id="email" name="email"
+                    @input="resetErrorEmail" @blur="verifyEmail"
+                    :class="{inputError: emailError, inputValid: emailValid}">
+                    <p class="pError" v-if="emailError">{{errorEmail}}</p>
+                </div>
+                <div>
+                    <label for="mensaje" class="labelMensaje">Mensaje:</label>
+                    <textarea v-model="mensaje" 
+                    id="mensaje" name="mensaje"
+                    @blur="verifyMensaje" @click="resetErrorMensaje"
+                    :class="{inputError: mensajeError, inputValid: mensajeValid}"></textarea>
+                    <p class="contador">{{mensaje.length}}</p>
+                    <p class="pError pErrorTextarea" v-if="mensajeError">{{errorMensaje}}</p>
+
+                </div>
+                <button @click="enviarFormulario">Enviar</button>
+            </form>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <script src="../scripts/main.js"></script>
+</body>
+
+
+</html>
