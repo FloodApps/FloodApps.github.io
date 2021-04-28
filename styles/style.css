@@ -214,6 +214,10 @@ input, textarea, button{
     box-shadow: 0 0 4px 0 rgb(105, 172, 114);
 }
 
+input{
+    margin-bottom: 20px;
+}
+
 label{
     color: rgb(73, 73, 73);
     font-size: 1.2em;
@@ -223,7 +227,6 @@ label{
     width: 80px;
     text-align: left;
     line-height: 1;
-    margin-top: 20px;
 }
 
 label.labelMensaje{
@@ -304,7 +307,7 @@ form{
     }
     .titulo{
         width: 100%;
-        margin-top: 250px;
+        margin-top: calc((100vh - 250px)/2 + 25px);
     }
     .titulo-leave, .titulo-enter-to {
         top: 0;
@@ -312,6 +315,7 @@ form{
     .cuerpo{
         width: 100%;
         margin-top:70px;
+        min-height: 450px;
     }
     .cuerpo-leave, .cuerpo-enter-to{
         left: 0;
@@ -332,5 +336,6 @@ form{
     textarea{
         min-width: 300px;
         max-width: 300px;
+        min-height: 200px;
     }
 }
