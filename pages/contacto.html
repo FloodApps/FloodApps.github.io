@@ -21,7 +21,7 @@
             <a href="#">Prueba</a>
             <a href="#">Acerca De</a>
             <a href="#" class="selected">Contacto</a>
-
+        </div>
         <div class="cuerpo">
             <form>
                 <div>
@@ -50,7 +50,7 @@
                     <p class="pError pErrorTextarea" v-if="mensajeError">{{errorMensaje}}</p>
 
                 </div>
-                <button @click="enviarFormulario">Enviar</button>
+                <button @click="enviarFormulario" type="button">Enviar</button>
             </form>
         </div>
     </div>

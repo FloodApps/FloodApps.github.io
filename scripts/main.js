@@ -1,6 +1,8 @@
 const app = new Vue({
-  el: ".cuerpo",
+  el: ".header",
   data: {
+    contacto: false,
+    index: true,
     errorNombre: "",
     nombre: "",
     email: "",
@@ -17,12 +19,16 @@ const app = new Vue({
       if(this.nombre === ""){
         this.errorNombre = "El nombre es necesario";
       }
-      else if(this.nombre.length < 3){
-        this.errorNombre = "Nombre muy corto";
+      else if(this.nombre.length < 3 || !this.validName(this.nombre)){
+        this.errorNombre = "Nombre inválido";
       } else {
         this.errorNombre = "";
       }
       this.nameValid = !this.errorNombre;
+    },
+    validName: function(name){
+      let re = /^[^<>()[\]\\¿?^¡!{}%/*+@$·#¬=]*$/;
+      return re.test(name);
     },
     resetErrorName(){
       this.nameValid = false;
@@ -78,6 +84,17 @@ const app = new Vue({
         alert("Formulario Enviado");
       }
     },
+
+    selectContacto(){
+      this.contacto = true;
+      this.index = false;
+    },
+
+    selectIndex(){
+      this.contacto = false;
+      this.index = true;
+    }
+
 
   },
   computed: {

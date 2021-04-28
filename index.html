@@ -17,13 +17,50 @@
     
     <div class="header">
         <div class="menu">
-            <a href="#" class="selected">Inicio</a>
-            <a href="#">Prueba</a>
+            <a href="#" @click="selectIndex" :class="{selected: index}">Inicio</a>
+            <a href="pages/prueba.html">Prueba</a>
             <a href="#">Acerca De</a>
-            <a href="pages/contacto.html">Contacto</a>
+            <a href="#" @click="selectContacto" :class="{selected: contacto}">Contacto</a>
         </div>
-        <div class="titulo"><h1>FloodApps</h1></div>
+        <transition name="titulo">
+        <div class="titulo" v-if="index"><h1>FloodApps</h1></div>
+        </transition>
+        <transition name="cuerpo">
+        <div class="cuerpo" v-if="contacto">
+            <form>
+                <div>
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" v-model.trim="nombre"
+                    @blur="verifyName" @input="resetErrorName"
+                    id="nombre" name="nombre" 
+                    :class="{inputError: nameError, inputValid: nameValid}">
+                    <p class="pError" v-if="nameError">{{errorNombre}}</p>
+                </div>
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="text" v-model.trim="email"
+                    id="email" name="email"
+                    @input="resetErrorEmail" @blur="verifyEmail"
+                    :class="{inputError: emailError, inputValid: emailValid}">
+                    <p class="pError" v-if="emailError">{{errorEmail}}</p>
+                </div>
+                <div>
+                    <label for="mensaje" class="labelMensaje">Mensaje:</label>
+                    <textarea v-model="mensaje" 
+                    id="mensaje" name="mensaje"
+                    @blur="verifyMensaje" @click="resetErrorMensaje"
+                    :class="{inputError: mensajeError, inputValid: mensajeValid}"></textarea>
+                    <p class="contador">{{mensaje.length}}</p>
+                    <p class="pError pErrorTextarea" v-if="mensajeError">{{errorMensaje}}</p>
+
+                </div>
+                <button @click="enviarFormulario" type="button">Enviar</button>
+            </form>
+        </div>
+        </transition>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <script src="scripts/main.js"></script>
 </body>
 
 

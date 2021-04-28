@@ -1,0 +1,29 @@
+body{
+    background-color:rgb(75, 86, 151);
+}
+.principal{
+    margin: 50px auto;
+    height: 500px;
+    width: 500px;
+    background-color: rgb(92, 42, 42);
+    position: relative;
+}
+
+.caja1{
+    width: 100px;
+    height: 100px;
+    padding: 5px;
+    background-color: rgb(124, 86, 51);
+    bottom:0;
+    top: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    position: absolute;
+}
+
+.caja2{
+    height: 250px;
+    background-color: rgb(62, 127, 143);
+    padding: 5px;
+}
