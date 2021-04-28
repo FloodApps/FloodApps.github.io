@@ -4,7 +4,8 @@
     background-position: center;
     background-color: aliceblue;
     background-size: cover;
-    min-height: 700px;
+    min-height: 800px;
+    min-width: 600px;
     position: relative;
     padding-bottom: 25px;
 }
@@ -48,6 +49,12 @@
     margin-left: auto;
     margin-right: auto;
     border-radius: 0 0 5px 5px;
+}
+
+@media screen and (max-width: 600px) {
+    .menu{
+        width: 100%;
+    }
 }
 
 .menu a{
@@ -96,41 +103,49 @@
     left: 100vw;
 }
 
+@media screen and (max-width: 600px) {
+    .cuerpo{
+        width: 100%
+    }
+    .cuerpo-leave, .cuerpo-enter-to{
+        left: 0;
+    }
+}
+
 .pError{
     color: rgb(172, 14, 14);
     font-size: 1em;
     line-height: 1;
-    margin-top: 3px;
+    margin-top: 5px;
     margin-bottom: 30px;
-    margin-left: 75px;
+    margin-left: 50px;
     text-align: left;
 }
 
 .pErrorTextarea{
     margin-left: 0;
-    margin-bottom: 20px;
 }
 
 .contador{
     color: rgb(0, 0, 0);
     font-size: 1em;
     line-height: 0;
-    margin-top: 1px;
-    margin-right: 3%;
-    margin-top: -25px;
-    margin-bottom: 25px;
     text-align: right;
+    right: 12px;
+    margin-top: -20px;
+    position: absolute;
+    z-index: 1;
 }
 
 input, textarea, button{
-    font-size: 1.1em;
+    font-size: 1.2em;
     box-shadow: 0 0 4px 0px rgb(168, 168, 168);
     border: 1px solid rgb(173, 173, 173);
     padding: 5px 10px;
     color: rgb(73, 73, 73);
     background: rgba(255, 255, 255, 0.582);
     border-radius: 4px;
-    width: 250px;
+    width: 300px;
     outline: none;
 }
 
@@ -146,10 +161,10 @@ input, textarea, button{
 
 label{
     color: rgb(73, 73, 73);
-    font-size: 1em;
+    font-size: 1.2em;
     display: block;
-    margin-left: 75px;
-    margin-bottom: 2px;
+    margin-left: 50px;
+    margin-bottom: 4px;
     width: 80px;
     text-align: left;
     line-height: 1;
@@ -164,15 +179,16 @@ label.labelMensaje{
 textarea{
     min-width: 400px;
     max-width: 400px;
-    min-height: 200px;
-    max-height: 400px;
+    min-height: 300px;
+    max-height: 500px;
     padding-bottom: 25px;
+    position: relative;
+    z-index: 100;
 }
 
 button{  
     background: rgba(219, 219, 219, 0.582);
     cursor: pointer;
-    margin-top: 10px;
 }
 
 button:hover{
@@ -185,4 +201,9 @@ button:active{
 
 form{
     text-align: center;
+    position: relative;
+}
+
+@media screen and (max-width: 600px){
+
 }
