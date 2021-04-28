@@ -102,7 +102,7 @@
     line-height: 1;
     margin-top: 3px;
     margin-bottom: 30px;
-    margin-left: 22%;
+    margin-left: 75px;
     text-align: left;
 }
 
@@ -130,6 +130,7 @@ input, textarea, button{
     color: rgb(73, 73, 73);
     background: rgba(255, 255, 255, 0.582);
     border-radius: 4px;
+    width: 250px;
     outline: none;
 }
 
@@ -147,7 +148,7 @@ label{
     color: rgb(73, 73, 73);
     font-size: 1em;
     display: block;
-    margin-left: 22%;
+    margin-left: 75px;
     margin-bottom: 2px;
     width: 80px;
     text-align: left;
