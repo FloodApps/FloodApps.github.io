@@ -307,7 +307,7 @@ form{
     }
     .titulo{
         width: 100%;
-        margin-top: calc((100vh - 250px)/2 + 25px);
+        margin-top: calc((100vh - 250px)/2);
     }
     .titulo-leave, .titulo-enter-to {
         top: 0;
