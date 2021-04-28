@@ -12,6 +12,8 @@ const app = new Vue({
     mensaje: "",
     errorMensaje: "",
     mensajeValid: false,
+    menuExpand: false,
+    flechaMenu: "expand_more",
   },
   methods:{
 
@@ -88,13 +90,25 @@ const app = new Vue({
     selectContacto(){
       this.contacto = true;
       this.index = false;
+      this.menuExpand = false;
+      this.flechaMenu = "expand_more"
     },
 
     selectIndex(){
       this.contacto = false;
       this.index = true;
-    }
+      this.menuExpand = false;
+      this.flechaMenu = "expand_more"
+    },
 
+    expandMenu(){
+      this.menuExpand = !this.menuExpand;
+      if(this.menuExpand){
+        this.flechaMenu = "expand_less"
+      } else {
+        this.flechaMenu = "expand_more"
+      }
+    },
 
   },
   computed: {

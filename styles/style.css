@@ -5,22 +5,24 @@
     background-color: aliceblue;
     background-size: cover;
     min-height: 800px;
-    min-width: 600px;
     position: relative;
     padding-bottom: 25px;
+    display: flex;
+    flex-direction: column;
 }
 
 .titulo{
     background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 200px;
-    line-height: 200px; 
     text-align: center;
     margin-top: 200px;
 }
 
 .titulo-leave-active, .titulo-enter-active{
     position: fixed;
-    line-height: 0.46;
     width: 100%;
     transition: top 0.7s, opacity 1s;
 }
@@ -40,18 +42,23 @@
     font-size: 7em;
 }
 
+/* -------------  MENU   ------------------------- */  
+
 .menu{
-    background: rgba(0, 0, 0, 0.74);
-    height:50px;
-    line-height: 50px;
     text-align: center;
     width: 600px;
     margin-left: auto;
     margin-right: auto;
-    border-radius: 0 0 5px 5px;
 }
 
-.menu a{
+.menu-list{
+    border-radius: 0 0 5px 5px;
+    background: rgba(0, 0, 0, 0.74);
+    height:50px;
+    line-height: 50px;
+}
+
+.menu-list a{
     text-decoration: none;
     padding: 5px;
     margin: 0 10px;
@@ -61,20 +68,70 @@
     outline: none;
 }
 
-@media screen and (max-width: 600px) {
-    .menu{
-        width: 100%;
-        height: 60px;
-        line-height: 60px;
-    }
-    .menu a{
-        font-size: 1.8em;
-    }
-}
-
-.menu a:hover, .menu a.selected{
+.menu-list a:hover, .menu-list a.selected{
     color:rgb(209, 130, 66);
 }
+
+.menu-contraid{
+    top: 0;
+    width: 100%;
+    background: rgb(0, 0, 0);
+    opacity: 0.8;
+    display: none;
+    cursor: pointer;
+    position: fixed;
+    height: 50px;
+    z-index: 200;
+}
+
+.menu-expand{
+    display: none;
+    width: 100%;
+    height: 304px;
+    background-color: rgb(0, 0, 0);
+    opacity: 0.9;
+    position: fixed;
+    top: 50px;
+    z-index: 150;
+}
+
+.menu-expand a{
+    width: 100%;
+    display: block;
+    text-decoration: none;
+    padding: 20px 5px;
+    font-size: 2em;
+    color: rgb(224, 224, 224);
+    transition: 0.7s;
+    outline: none;
+    z-index: 150;
+}
+
+.menu-expand a.selected{
+    background:rgb(209, 130, 66);
+}
+
+.expandir{
+    font-size: 2.5em;
+    line-height: 50px;
+}
+
+.menu-leave-active, .menu-enter-active{
+    position: fixed;
+    transition: top 0.7s, opacity 1s;
+}
+
+.menu-leave, .menu-enter-to {
+    opacity: 0.9;
+    top: 50px;
+}
+
+.menu-leave-to, .menu-enter{
+    opacity: 0;
+    top: -400px;
+}
+
+/* ------------- FORMULARIO DE CONTACTO -------------------------- */
 
 .cuerpo{
     min-height: 600px;
@@ -94,6 +151,7 @@
 .cuerpo-leave-active, .cuerpo-enter-active{
     margin-left: 0;
     margin-right: 0;
+    top: 50px;
     position: fixed;
     transition: left 0.7s, opacity 0.8s;
 }
@@ -106,15 +164,6 @@
 .cuerpo-enter, .cuerpo-leave-to{
     opacity: 0;
     left: 100vw;
-}
-
-@media screen and (max-width: 600px) {
-    .cuerpo{
-        width: 100%
-    }
-    .cuerpo-leave, .cuerpo-enter-to{
-        left: 0;
-    }
 }
 
 .pError{
@@ -177,15 +226,6 @@ label{
     margin-top: 20px;
 }
 
-@media screen and (max-width: 600px) {
-    input, textarea, button, label{
-        font-size: 1.6em;
-    }
-    .pError{
-        font-size: 1.3em;
-    }
-}
-
 label.labelMensaje{
     margin-left: 0;
     margin-bottom: 8px;
@@ -219,4 +259,78 @@ button:active{
 form{
     text-align: center;
     position: relative;
+}
+
+
+@media screen and (max-width: 600px) and (min-width: 480px){
+    .header h1{
+        font-size: 6em;
+    }
+    .menu{
+        width: 100%;
+    }
+    .titulo{
+        width: 100%;
+    }
+    .cuerpo{
+        width: 100%;
+    }
+    .cuerpo-leave, .cuerpo-enter-to{
+        left: 0;
+    }
+    input, textarea, button, label{
+        font-size: 1.4em;
+    }
+    .pError{
+        font-size: 1.1em;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .header h1{
+        font-size: 4em;
+    }
+    .menu{
+        width: 100%;
+    }
+    .menu-list{
+        display: none;
+    }
+    .menu-contraid{
+        display: block;
+    }
+    .menu-expand{
+        display: block;
+    }
+    .titulo{
+        width: 100%;
+        margin-top: 250px;
+    }
+    .titulo-leave, .titulo-enter-to {
+        top: 0;
+    }
+    .cuerpo{
+        width: 100%;
+        margin-top:70px;
+    }
+    .cuerpo-leave, .cuerpo-enter-to{
+        left: 0;
+    }
+    .cuerpo-leave-active, .cuerpo-enter-active{
+        top: 0;
+    }
+    input, textarea, button, label{
+        font-size: 1.2em;
+    }
+    label{
+        margin-left: 0;
+    }
+    .pError{
+        font-size: 1em;
+        margin-left: 0;
+    }
+    textarea{
+        min-width: 300px;
+        max-width: 300px;
+    }
 }
