@@ -50,6 +50,7 @@
                         :class="{inputError: nameError, inputValid: nameValid}">
                         <p class="pError" v-if="nameError">{{errorNombre}}</p>
                     </div>
+                    <div class="space"></div>
                     <div>
                         <label for="email">Email:</label>
                         <input type="text" v-model.trim="email"
@@ -58,6 +59,7 @@
                         :class="{inputError: emailError, inputValid: emailValid}">
                         <p class="pError" v-if="emailError">{{errorEmail}}</p>
                     </div>
+                    <div class="space"></div>
                     <div>
                         <label for="mensaje" class="labelMensaje">Mensaje:</label>
                         <textarea v-model="mensaje" 
