@@ -43,29 +43,26 @@
             <div class="cuerpo" v-if="contacto">
                 <form>
                     <div>
-                        <label for="nombre">Nombre:</label>
                         <input type="text" v-model.trim="nombre"
                         @blur="verifyName" @input="resetErrorName"
                         id="nombre" name="nombre" 
-                        :class="{inputError: nameError, inputValid: nameValid}">
+                        :class="{inputError: nameError, inputValid: nameValid}" placeholder="Nombre">
                         <p class="pError" v-if="nameError">{{errorNombre}}</p>
                     </div>
                     <div class="space"></div>
                     <div>
-                        <label for="email">Email:</label>
-                        <input type="text" v-model.trim="email"
+                        <input type="email" v-model.trim="email"
                         id="email" name="email"
                         @input="resetErrorEmail" @blur="verifyEmail"
-                        :class="{inputError: emailError, inputValid: emailValid}">
+                        :class="{inputError: emailError, inputValid: emailValid}" placeholder="Email">
                         <p class="pError" v-if="emailError">{{errorEmail}}</p>
                     </div>
                     <div class="space"></div>
                     <div>
-                        <label for="mensaje" class="labelMensaje">Mensaje:</label>
                         <textarea v-model="mensaje" 
                         id="mensaje" name="mensaje"
                         @blur="verifyMensaje" @click="resetErrorMensaje"
-                        :class="{inputError: mensajeError, inputValid: mensajeValid}"></textarea>
+                        :class="{inputError: mensajeError, inputValid: mensajeValid}" placeholder="Escriba su mensaje"></textarea>
                         <p class="contador">{{mensaje.length}}</p>
                         <p class="pError pErrorTextarea" v-if="mensajeError">{{errorMensaje}}</p>
 

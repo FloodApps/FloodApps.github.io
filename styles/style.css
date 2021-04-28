@@ -64,12 +64,12 @@
     margin: 0 10px;
     font-size: 1.5em;
     color: rgb(224, 224, 224);
-    transition: 0.7s;
+    transition: color 0.7s;
     outline: none;
 }
 
 .menu-list a:hover, .menu-list a.selected{
-    color:rgb(209, 130, 66);
+    color:rgb(125, 168, 172);
 }
 
 .menu-contraid{
@@ -108,7 +108,7 @@
 }
 
 .menu-expand a.selected{
-    background:rgb(209, 130, 66);
+    background:rgb(93, 130, 133);
 }
 
 .expandir{
@@ -131,14 +131,14 @@
     top: -400px;
 }
 
-/* ------------- FORMULARIO DE CONTACTO -------------------------- */
+/* --;----------- FORMULARIO DE CONTACTO -------------------------- */
 
 .cuerpo{
     min-height: 600px;
     margin-top: 25px;
     margin-left: auto;
     margin-right: auto;
-    background: rgba(255, 255, 255, 0.938);
+    background: rgba(26, 26, 26, 0.95);
     width: 600px;
     display: flex;
     align-items: center;
@@ -167,7 +167,7 @@
 }
 
 .pError{
-    color: rgb(172, 14, 14);
+    color: rgb(148, 85, 85);
     font-size: 1em;
     line-height: 1;
     margin-top: 5px;
@@ -188,45 +188,37 @@
     right: 12px;
     margin-top: -20px;
     position: absolute;
+    color: rgb(167, 167, 167);
     z-index: 1;
 }
 
-input, textarea, button{
+input, textarea{
     font-size: 1.2em;
-    box-shadow: 0 0 4px 0px rgb(168, 168, 168);
-    border: 1px solid rgb(173, 173, 173);
-    padding: 5px 10px;
-    color: rgb(73, 73, 73);
-    background: rgba(255, 255, 255, 0.582);
-    border-radius: 4px;
     width: 300px;
+    border: none;
+    border-bottom: 3px solid rgb(93, 130, 133);
+    box-shadow: 0 0 15px rgb(0, 0, 0,0.9);
+    background-color: transparent;
+    padding: 5px 10px;
+    resize: none;
+    color: rgb(219, 219, 219);
+}
+
+input::placeholder, textarea::placeholder{
+    color: rgb(156, 156, 156);
+}
+
+input:focus, textarea:focus{
     outline: none;
+    background-color: rgba(63, 63, 63, 0.089);
 }
 
 .inputError{
-    border: 1px solid rgb(153, 37, 37);
-    box-shadow: 0 0 4px 0 rgb(153, 37, 37);
+    border-bottom: 3px solid rgb(151, 65, 65);
 }
 
 .inputValid{
-    border: 1px solid rgb(105, 172, 114);
-    box-shadow: 0 0 4px 0 rgb(105, 172, 114);
-}
-
-label{
-    color: rgb(73, 73, 73);
-    font-size: 1.2em;
-    display: block;
-    margin-left: 50px;
-    margin-bottom: 4px;
-    width: 80px;
-    text-align: left;
-    line-height: 1;
-}
-
-label.labelMensaje{
-    margin-left: 0;
-    margin-bottom: 8px;
+    border-bottom: 3px solid rgb(105, 172, 114);
 }
 
 textarea{
@@ -240,28 +232,35 @@ textarea{
 }
 
 button{  
-    background: rgba(219, 219, 219, 0.582);
+    background: rgba(96, 142, 153, 0.7);
+    font-size: 1.2em;
+    border: none;
+    box-shadow: -1px -1px 5px rgba(96, 142, 153, 0.6), 3px 3px 10px 1px rgb(0, 0, 0);
     cursor: pointer;
+    color: rgb(186, 191, 192);
+    padding: 10px;
     margin-top: 15px;
-    width: 100px;
-}
-
-button:hover{
-    background: rgba(182, 182, 182, 0.582);
+    width: 110px;
 }
 
 button:active{
-    background: rgba(139, 139, 139, 0.582);
+    box-shadow: -3px -3px 10px rgb(0, 0, 0,0.9), 1px 1px 5px rgba(96, 142, 153, 0.9);
+}
+
+button:hover{
+    background: rgba(96, 142, 153, 0.9);;
 }
 
 form{
     text-align: center;
     position: relative;
+    padding:20px 0;
+
 }
 
 .space{
     width: 100%;
-    height: 20px;
+    height: 30px;
 }
 
 

@@ -183,6 +183,10 @@
   input { /* 1 */
     overflow: visible;
   }
+
+  input::placeholder, textarea::placeholder{
+    opacity: 1
+  }
   
   /**
    * Remove the inheritance of text transform in Edge, Firefox, and IE.
