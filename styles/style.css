@@ -1,10 +1,11 @@
-.header{
+.content{
     margin: 0;
     background-image: url(../images/header.jpg);
     background-position: center;
     background-color: aliceblue;
     background-size: cover;
     min-height: 800px;
+    min-width: 320px;
     position: relative;
     padding-bottom: 25px;
     display: flex;
@@ -24,20 +25,24 @@
 .titulo-leave-active, .titulo-enter-active{
     position: fixed;
     width: 100%;
-    transition: top 0.7s, opacity 1s;
+    transition: transform 0.7s, opacity 1s;
+    top: 50px;
+}
+
+.titulo-enter-active{
+    transition-delay: 0.2s;
 }
 
 .titulo-leave, .titulo-enter-to {
     opacity: 1;
-    top: 50px;
 }
 
 .titulo-leave-to, .titulo-enter{
     opacity: 0;
-    top: 100vh;
+    transform: translateY(100vh);
 }
 
-.header h1{
+.content h1{
     color: rgba(248, 248, 248, 0.9);
     font-size: 7em;
 }
@@ -64,7 +69,7 @@
     margin: 0 10px;
     font-size: 1.5em;
     color: rgb(224, 224, 224);
-    transition: color 0.7s;
+    transition: color   0.7s;
     outline: none;
 }
 
@@ -87,7 +92,6 @@
 .menu-expand{
     display: none;
     width: 100%;
-    height: 304px;
     background-color: rgb(0, 0, 0);
     opacity: 0.9;
     position: fixed;
@@ -100,7 +104,7 @@
     display: block;
     text-decoration: none;
     padding: 20px 5px;
-    font-size: 2em;
+    font-size: 1.7em;
     color: rgb(224, 224, 224);
     transition: 0.7s;
     outline: none;
@@ -118,23 +122,31 @@
 
 .menu-leave-active, .menu-enter-active{
     position: fixed;
-    transition: top 0.7s, opacity 1s;
+    transition: transform 0.7s, opacity 1s;
+    top: 50px;
 }
 
 .menu-leave, .menu-enter-to {
     opacity: 0.9;
-    top: 50px;
 }
 
 .menu-leave-to, .menu-enter{
     opacity: 0;
-    top: -400px;
+    transform: translateY(-400px);
+}
+
+.menu-exit{
+    height: 100vh;
+    width:100%;
+    top: 0;
+    position: fixed;
 }
 
 /* --;----------- FORMULARIO DE CONTACTO -------------------------- */
 
-.cuerpo{
+.contacto{
     min-height: 600px;
+    min-width: 320px;
     margin-top: 25px;
     margin-left: auto;
     margin-right: auto;
@@ -148,22 +160,30 @@
     padding-top: 25px;
 }
 
-.cuerpo-leave-active, .cuerpo-enter-active{
+.contacto-leave-active, .contacto-enter-active{
     margin-left: 0;
     margin-right: 0;
     top: 50px;
     position: fixed;
-    transition: left 0.7s, opacity 0.8s;
-}
-
-.cuerpo-leave, .cuerpo-enter-to{
-    opacity: 1;
     left: calc(50vw - 300px);
 }
 
-.cuerpo-enter, .cuerpo-leave-to{
+.contacto-enter-active{
+    transition: opacity 1s, transform 0.7s;
+    transition-delay: 0.1s;
+}
+
+.contacto-leave-active{
+    transition: opacity 0.4s, transform 0.5s;
+}
+
+.contacto-leave, .contacto-enter-to{
+    opacity: 1;
+}
+
+.contacto-enter, .contacto-leave-to{
     opacity: 0;
-    left: 100vw;
+    transform: translateX(100vw);
 }
 
 .pError{
@@ -265,7 +285,7 @@ form{
 
 
 @media screen and (max-width: 600px) and (min-width: 480px){
-    .header h1{
+    .content h1{
         font-size: 6em;
     }
     .menu{
@@ -274,10 +294,10 @@ form{
     .titulo{
         width: 100%;
     }
-    .cuerpo{
+    .contacto{
         width: 100%;
     }
-    .cuerpo-leave, .cuerpo-enter-to{
+    .contacto-leave-active, .contacto-enter-active{
         left: 0;
     }
     input, textarea, button, label{
@@ -289,7 +309,7 @@ form{
 }
 
 @media screen and (max-width: 480px) {
-    .header h1{
+    .content h1{
         font-size: 4em;
     }
     .menu{
@@ -308,18 +328,16 @@ form{
         width: 100%;
         margin-top: calc((100vh - 250px)/2);
     }
-    .titulo-leave, .titulo-enter-to {
+    .titulo-leave-active, .titulo-enter-active {
         top: 0;
     }
-    .cuerpo{
+    .contacto{
         width: 100%;
         margin-top:70px;
         min-height: 450px;
     }
-    .cuerpo-leave, .cuerpo-enter-to{
+    .contacto-leave-active, .contacto-enter-active{
         left: 0;
-    }
-    .cuerpo-leave-active, .cuerpo-enter-active{
         top: 0;
     }
     input, textarea, button, label{

@@ -1,5 +1,5 @@
 const app = new Vue({
-  el: ".header",
+  el: "#content",
   data: {
     contacto: false,
     index: true,
