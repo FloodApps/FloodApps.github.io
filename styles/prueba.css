@@ -80,3 +80,17 @@ body{
     left: 4px;
     z-index: -8;
 }
+
+@media screen and (max-width: 600px){
+    .img-container{
+        position: relative;
+        top: 200px;
+        left: 30px;
+        width: 303px;
+        transform: perspective(1500px) rotateX(60deg) rotateZ(10deg);
+        transition: transform 1s;
+    }
+    .img3d{
+        width: 300px;
+    }
+}
